@@ -106,6 +106,14 @@ window.log=function(){log.history=log.history||[];log.history.push(arguments);if
 		        container.append(content);
 			}
 		};
+
+		/**
+		 * Helper method to clear the state. Called after a submit
+		**/
+		var _clear = function() {
+			_clearSelectedImages();
+			_showAlbumList();
+		};
 		
 		/**
 		 * Helper method for _showAlbumContent. Creates the DOM structure for an Album image, adds click listener, and appends it to the container.
@@ -339,6 +347,7 @@ window.log=function(){log.history=log.history||[];log.history.push(arguments);if
 				if (settings.submitCallback) {
 					settings.submitCallback(outputJson);
 				};
+				_clear();
 			};
 		};
 		
