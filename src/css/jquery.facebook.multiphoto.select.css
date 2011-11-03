@@ -13,7 +13,7 @@
 **/
 #jfmps-container{
 	background:#fff;
-	height:476px;
+	height:540px;
 	width:725px;
 	margin:0 auto;
 	overflow: hidden;
@@ -38,7 +38,7 @@
 #jfmps-album-covers,
 #jfmps-album-photos{
 	width:624px;
-	height:451px;
+	height:500px;
 	float:left;
 	overflow-x:hidden;
 	overflow-y:scroll;
@@ -79,12 +79,11 @@
 	float:left;
 	margin:3px;
 	padding:4px;
-	width:100px;
+	width:140px;
 	border: 1px solid #FFFFFF;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 }
-.jfmps-albumimage {width:85px;}
 
 .jfmps-albumimage.selected{
 	background-color: #3B5998;

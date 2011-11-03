@@ -47,7 +47,7 @@ window.log=function(){log.history=log.history||[];log.history.push(arguments);if
 				noAlbumImagesText : "You have no images in this album.",
 				noAlbumsText : "You do not have any albums.",
 				selectedImageCallback: null,
-				debug: false
+				debug: true
 			},
 			albumImageCache,
 			selectedPhotos,
@@ -124,7 +124,7 @@ window.log=function(){log.history=log.history||[];log.history.push(arguments);if
 			albumEl.data('album_id', album.id);
 			
 			var albumName = $('<div class="jfmps-albumname" />').text(album.name);
-			var albumCoverImage = $('<img width="75" src="https://graph.facebook.com/' + album.id  + '/picture?access_token=' + FB.getSession().access_token + '&amp;type=thumbnail" />');
+			var albumCoverImage = $('<img width="130" src="https://graph.facebook.com/' + album.id  + '/picture?access_token=' + FB.getSession().access_token + '&amp;type=small" />');
 			
 			albumEl.append(albumCoverImage);
 			
@@ -180,7 +180,7 @@ window.log=function(){log.history=log.history||[];log.history.push(arguments);if
     					imageContainer.addClass('selected');
     				}
 				
-    				var albumImage = $('<img width="75" src="https://graph.facebook.com/' + albumImagesData[i].id  + '/picture?access_token=' + FB.getSession().access_token + '&amp;type=thumbnail" />');
+    				var albumImage = $('<img width="130" src="https://graph.facebook.com/' + albumImagesData[i].id  + '/picture?access_token=' + FB.getSession().access_token + '&amp;type=album" />');
 				
     				imageContainer.append(albumImage);
 				
