@@ -53,6 +53,11 @@ window.log=function(){log.history=log.history||[];log.history.push(arguments);if
 			selectedPhotos,
 			selectedPhotosCount = 0;
 		settings = $.extend(true, settings, options || {});
+
+		if (settings.maxPhotosSelected == 1) {
+			$("#jfmps-selected-container").hide();
+			$(".jfmps-meta").hide();
+		}
 				
 		/**
 		 * Main entry point. Queries Facebook Graph API for a list of user albums, executes callback on completion.
@@ -198,11 +203,16 @@ window.log=function(){log.history=log.history||[];log.history.push(arguments);if
 				if (selectedPhotos[imageId] === undefined) {
 					if (selectedPhotosCount < settings.maxPhotosSelected) {
 						selectedPhotos[imageId] = imageData;
+						selectedPhotosCount += 1;
+						// If we can only select one photo, then simply submit the selection
+						if (settings.maxPhotosSelected === 1) {
+							_submitSelectedImages();
+						}
+
 						imageContainer.addClass('selected');
 				
 						_addToSelectedList(imageContainer);
 				
-						selectedPhotosCount += 1;
 						_updateSelectedCountDisplay();
 						
 						settings.selectedImageCallback !== null ? settings.selectedImageCallback() : null;
