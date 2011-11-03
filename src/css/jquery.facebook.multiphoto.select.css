@@ -79,7 +79,7 @@
 	float:left;
 	margin:3px;
 	padding:4px;
-	width:126px;
+	width:100px;
 	border: 1px solid #FFFFFF;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -107,14 +107,12 @@
 	color:#111111;
 	font-size:11px;
 	overflow:hidden;
-	padding:2px 0 0 6px;
-	width:62px;
+	padding:2px 0 0 2px;
 }
 
 .jfmps-albumcover img,
 .jfmps-albumimage img {
 	border: 1px solid #CCCCCC;
-	float: left;
 	margin: 0;
 }
 .jfmps-albumimage img{float:none;margin-left:4px;}
