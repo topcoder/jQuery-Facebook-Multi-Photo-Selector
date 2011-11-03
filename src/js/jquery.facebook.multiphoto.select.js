@@ -40,8 +40,7 @@ window.log=function(){log.history=log.history||[];log.history.push(arguments);if
 			breadCrumbTpl = '{album_name} [X]',
 			settings = {
 				maxPhotosSelected : 10,
-				numAlbumColumns : 4,
-				numPhotosColumns: 6,
+				numColumns : 4,
 				imageSubmitButton : $('#jfmps-submit-button'),
 				submitCallback : function(jsonData){ alert(jsonData); },
 				noAlbumImagesText : "You have no images in this album.",
@@ -63,8 +62,8 @@ window.log=function(){log.history=log.history||[];log.history.push(arguments);if
 		 * Main entry point. Queries Facebook Graph API for a list of user albums, executes callback on completion.
 		*/
 		var _init = function(){
-			if (settings.numAlbumColumns < 1 || settings.numPhotosColumns < 1) {
-				if (settings.debug) {log('settings.numAlbumColumns & settings.numPhotosColumns must be greater than 0');}
+			if (settings.numColumns < 1) {
+				if (settings.debug) {log('settings.numColumns must be greater than 0');}
 				return;
 			}
 			
@@ -95,7 +94,7 @@ window.log=function(){log.history=log.history||[];log.history.push(arguments);if
 				imageClearButton.bind('click', _clearSelectedImages);
 
 				for (i = 0; i < albums.length; i++) {
-					var newRow = (i + 1) % settings.numAlbumColumns === 1 || settings.numAlbumColumns === 1 ? true : false;
+					var newRow = (i + 1) % settings.numColumns === 1 || settings.numColumns === 1 ? true : false;
 					if (newRow) {
 					 albumContainer.append('<div class="image-row" />');
 					}
@@ -169,7 +168,7 @@ window.log=function(){log.history=log.history||[];log.history.push(arguments);if
 				i;
             if (albumImagesData.length > 0) {
     			for (i = 0; i < albumImagesData.length; i++) {
-					var newRow = (i + 1) % settings.numPhotosColumns === 1 ? true : false;
+					var newRow = (i + 1) % settings.numColumns === 1 ? true : false;
 					if (newRow) {
 					 albumPhotosContainer.append('<div class="image-row" />');
 					}
