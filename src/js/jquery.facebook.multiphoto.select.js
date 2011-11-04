@@ -179,7 +179,7 @@ window.log=function(){log.history=log.history||[];log.history.push(arguments);if
     					imageContainer.addClass('selected');
     				}
 				
-    				var albumImage = $('<img width="130" src="https://graph.facebook.com/' + albumImagesData[i].id  + '/picture?access_token=' + FB.getSession().access_token + '&amp;type=album" />');
+    				var albumImage = $('<img src="https://graph.facebook.com/' + albumImagesData[i].id  + '/picture?access_token=' + FB.getSession().access_token + '&amp;type=album" />');
 				
     				imageContainer.append(albumImage);
 				
