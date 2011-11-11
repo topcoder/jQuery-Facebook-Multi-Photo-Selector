@@ -56,6 +56,8 @@ window.log=function(){log.history=log.history||[];log.history.push(arguments);if
 		if (settings.maxPhotosSelected == 1) {
 			$("#jfmps-selected-container").hide();
 			$(".jfmps-meta").hide();
+			$("#jfmps-album-covers").css("width", "100%");
+			$("#jfmps-album-photos").css("width", "100%");
 		}
 				
 		/**

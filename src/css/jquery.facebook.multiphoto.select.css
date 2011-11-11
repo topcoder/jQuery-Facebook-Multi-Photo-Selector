@@ -41,7 +41,7 @@
 	height:500px;
 	float:left;
 	overflow-x:hidden;
-	overflow-y:scroll;
+	overflow-y:auto;
 }
 #jfmps-album-covers .image-row,
 #jfmps-album-photos .image-row{
