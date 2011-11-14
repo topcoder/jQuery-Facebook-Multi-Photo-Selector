@@ -20,12 +20,12 @@
 	font-family:Tahoma,Helvetica,sans-serif;
 }
 #jfmps-inner-header{
-	background:none repeat scroll 0 0 #555;
+	background:none repeat scroll 0 0 #445e95;
 	border-bottom:1px solid #222;
 	color:#fff;
 	font-size:16px;
 	height:25px;
-	padding:10px;
+	padding:6px;
 }
 #jfmps-inner-header .jfmps-meta{
 	color: #3B5998;
