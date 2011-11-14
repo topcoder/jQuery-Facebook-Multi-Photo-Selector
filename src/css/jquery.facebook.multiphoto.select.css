@@ -17,15 +17,15 @@
 	width:765px;
 	margin:0 auto;
 	overflow: hidden;
+	font-family:Tahoma,Helvetica,sans-serif;
 }
 #jfmps-inner-header{
-	background:none repeat scroll 0 0 #F7F7F7;
-	border-bottom:1px solid #CCCCCC;
-	color:#3B5998;
-	font-size:11px;
-	font-weight:bold;
+	background:none repeat scroll 0 0 #555;
+	border-bottom:1px solid #222;
+	color:#fff;
+	font-size:16px;
 	height:25px;
-	padding:2px;
+	padding:10px;
 }
 #jfmps-inner-header .jfmps-meta{
 	color: #3B5998;
@@ -104,7 +104,7 @@
 .jfmps-albumcover div,
 .jfmps-albumimage div{
 	color:#111111;
-	font-size:11px;
+	font-size:13px;
 	overflow:hidden;
 	padding:2px 0 0 2px;
 }
